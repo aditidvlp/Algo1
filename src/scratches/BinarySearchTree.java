@@ -1,23 +1,21 @@
 package scratches;
 
-import static java.lang.System.out;
-
 public class BinarySearchTree {
 
 
-    Node root;
+    TreeNode root;
    public void addNode(int key, String name) {
 
-       Node newNode = new Node(key, name);
+       TreeNode newNode = new TreeNode(key, name);
 
        if (root == null) {
 
            root = newNode;
        } else {
 
-           Node focusNode = root;
+           TreeNode focusNode = root;
 
-           Node parent;
+           TreeNode parent;
 
            while (true) {
 
@@ -50,7 +48,7 @@ public class BinarySearchTree {
     //left node and right node
 
 
-    public  void inOrderTraverseTree (Node focusNode){
+    public  void inOrderTraverseTree (TreeNode focusNode){
 
        if ( focusNode != null)
             {
@@ -63,7 +61,7 @@ public class BinarySearchTree {
             }
     }
 
-    public  void preOrderTraverseTree (Node focusNode){
+    public  void preOrderTraverseTree (TreeNode focusNode){
 
         if ( focusNode != null)
         {
@@ -76,9 +74,9 @@ public class BinarySearchTree {
         }
     }
 
-    public Node findNode(int key) {
+    public TreeNode findNode(int key) {
 
-        Node focusNode = root;
+        TreeNode focusNode = root;
 
         while (focusNode.key != key) {
 
@@ -115,24 +113,3 @@ public class BinarySearchTree {
     }
 }
 
-    class Node {
-        int key;
-        String name;
-        Node leftChild;
-        Node rightChild;
-
-
-        Node(int key, String name) {
-
-            this.key = key;
-
-            this.name = name;
-
-
-        }
-
-        public String toString() {
-
-            return name + " has a key " + key;
-        }
-    }

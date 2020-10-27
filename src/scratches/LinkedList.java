@@ -1,46 +1,38 @@
 package scratches;
 
 public class LinkedList {
-
-       Node head;
-
-       public boolean isEmpty() {
-           return (head == null);
-       }
+    LinkedListNode head;
+    LinkedListNode current;
 
        public void insert(int data) {
 
-           Node newNode = new Node();
-           newNode.next = head;
+           LinkedListNode newNode = new LinkedListNode();
            newNode.data = data;
-           head = newNode;
-       }
+           newNode.next = null;
 
-       public void printLinkedList() {
+           if (head == null) {
 
-           Node current = head;
-           while (current != null) {
-               current.displayData();
-               current = current.next;
-           }
-           System.out.println();
-       }
+               head = newNode;
+           } else {
+               current = head;
 
-       public static void main(String[] args) {
-           LinkedList myLinkedList = new LinkedList();
-           myLinkedList.insert(2);
-           myLinkedList.insert(4);
-           myLinkedList.insert(6);
+               while (current.next != null) {
+                   current = current.next;
+               }
+               current.next = newNode;
 
-       }
-
-
-       class Node {
-           Node next;
-           int data;
-
-           public void displayData() {
-               System.out.println("{ " + data + " } ");
            }
        }
+
+       public void show() {
+           LinkedListNode newNode = head;
+           while (current.next != null) {
+               System.out.println("The element is " + newNode.data);
+               newNode = newNode.next;
+
+           }
+         //  System.out.println(newNode.data);
+
+       }
+
    }

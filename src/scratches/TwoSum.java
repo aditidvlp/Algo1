@@ -42,7 +42,7 @@ public class TwoSum{
         }
 
         List<Long> li = new LinkedList<>();
-        for(String s : senteces){
+        for(String s : sentences){
             long num = 0;
             String [] arrs = s.split(" ");
             for(String w : arrs){

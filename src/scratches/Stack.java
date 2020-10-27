@@ -60,4 +60,9 @@ public class Stack{
     }
 
 
+    public char pop() {
+    }
+
+    public boolean empty() {
+    }
 }

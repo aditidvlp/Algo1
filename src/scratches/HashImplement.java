@@ -1,7 +1,9 @@
+
 package scratches;
 
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 
 public class HashImplement {
 
@@ -39,5 +41,6 @@ public void put( int key){
    System.out.println(map.get("ddd"));
     }
 }
+
 
 
